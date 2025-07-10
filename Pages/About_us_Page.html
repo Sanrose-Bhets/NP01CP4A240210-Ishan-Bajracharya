@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- MetaTags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn more about PRISM , our team, and our mission to deliver timeless craftsmanship and innovation.">
+    <meta name="author" content="PRISM Watches Team">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <title>About Prism</title>
+    <style>
+        form {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px white;
+            padding: 20px;
+            width: 230px;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        select,
+        textarea,
+        button {
+            width: 100%;
+            margin-top: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            margin-top: 15px;
+
+        }
+
+        .Feedback Form {
+            position: relative;
+            left: 600px;
+        }
+
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .container {
+            height: 100px;
+            max-width: 100%;
+        }
+
+        .topnav {
+            width: 100%;
+            background-color: rgb(62, 61, 61);
+            display: flex;
+        }
+
+        .email {
+            display: flex;
+            padding: 10px;
+            flex: 50%;
+            width: 50%;
+        }
+
+        .mail-icon {
+            height: 35px;
+            width: 35px;
+        }
+
+        .gmail {
+            color: white;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .links {
+            display: flex;
+            gap: 30px;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: larger;
+
+        }
+
+        .links :hover {
+            color: rgb(67, 112, 223);
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bar {
+            height: 30px;
+            width: 30px;
+        }
+
+        nav {
+            background-color: black;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 15px;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .nav {
+            height: 800px;
+            background-repeat: no-repeat;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: fit-content;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: auto;
+            margin-right: 297px;
+        }
+
+        .logo1,
+        .logo2,
+        .logo3,
+        .logo4 {
+            height: 30px;
+            width: 30px;
+        }
+
+        .searchbar {
+            text-align: center;
+            background-color: rgb(37, 36, 36);
+            border-radius: 20px;
+            border: 1px solid rgb(97, 97, 97);
+            font-size: 17px;
+            padding: 10px 10px;
+            color: white;
+
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .about {
+            background-color: black;
+            color: white;
+        }
+
+        /* Team Section */
+        .team {
+            color: white;
+            display: flex;
+            justify-content: left;
+            padding: 40px 20px;
+            gap: 20px;
+        }
+
+        /* Team Member Card */
+        .team-member {
+            background-color: black;
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px white;
+            padding: 20px;
+            width: 230px;
+            text-align: center;
+            transition: transform 0.3s ease-in-out
+        }
+
+        .team-member:hover {
+            transform: translateY(-30px);
+        }
+
+        /* Team Member Image */
+        .team-member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid white;
+        }
+
+        /* Team Member Name */
+        .team-member h3 {
+            font-size: 20px;
+            margin-bottom: 5px;
+            color: white;
+        }
+
+        /* Position */
+        .team-member p {
+            font-size: 14px;
+            color: white;
+            margin: 5px 0;
+        }
+
+        /* Strong Text (Headings Inside Member Cards) */
+        .team-member p strong {
+            color: white;
+        }
+
+        .footer
+
+        /*styling of footer section*/
+            {
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .footer-top
+
+        /*styling of footer-top*/
+            {
+            display: flex;
+        }
+
+        .footerlogo {
+            padding: 10px;
+        }
+
+        .footer-logo-image {
+            height: 120px;
+            width: 100%;
+            flex: 30%;
+        }
+
+        .text-part {
+            color: white;
+            flex: 70%;
+            margin-top: 50px;
+            font-size: larger;
+        }
+
+        .footer-bottom {
+            padding: 20px;
+            display: flex;
+        }
+
+        .contact {
+            flex: 25%;
+        }
+
+        .contact p {
+            color: white;
+            font-size: larger;
+        }
+
+        .contact h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .pages a {
+            color: white;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        .pages h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .pages a:hover {
+            color: rgb(57, 98, 232);
+        }
+
+        .pages {
+            flex: 25%;
+
+        }
+
+        .services {
+            flex: 25%;
+        }
+
+        .services p {
+            color: white;
+            font-size: large;
+        }
+
+        .services h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .copy-right
+
+        /*styling of copy right part*/
+            {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: rgb(68, 65, 65);
+            text-align: center;
+            color: white;
+        }
+
+        .photos {
+            display: inline-block;
+            flex: 10%;
+        }
+
+        .photos img {
+            height: 30px;
+            width: 35px;
+
+        }
+
+        .image-photos {
+            margin-left: -10px;
+        }
+
+        .photos h2 {
+            color: white;
+            font-size: x-large;
+        }
+    </style>
+    <!--Title of the Page -->
+    <title>About Us - PRISM </title>
+
+    <!-- linking CSS -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="topnav">
+
+            <div class="email">
+                <img src="../Assets/7.png" alt="" class="mail-icon">
+                <div class="gmail">prism@gmail.com</div>
+            </div>
+
+            <div class="links">
+                <a href="../Home_Page/index.html">Home</a>
+                <a href="../Pages/Blog_Page.html">Blog</a>
+                <a href="../Pages/Product_Page.html">Product</a>
+                <a href="../Pages/Research_Page.html">Research</a>
+                <a href="../Pages/About_us_Page.html">About us</a>
+            </div>
+        </div>
+
+        <div class="nav">
+            <nav>
+                <div class="menu">
+                    <img src="../Assets/1.png" alt="" class="bar">
+                    <h3 style="color: white;">Menu</h3>
+                </div>
+                <img src="../Assets/1 (1).jpg" alt="" class="logo">
+                <div class="icons">
+                    <img src="../Assets/2.png" alt="" class="logo1">
+                    <input type="text" placeholder="Search here" class="searchbar">
+                    <img src="../Assets/3.png" alt="" class="logo2">
+                    <img src="../Assets/4.png" alt="" class="logo3">
+                    <a href="../Pages/Login_Page.html"><img src="../Assets/5.png" alt="" class="logo4"></a>
+
+                </div>
+                          
+            </nav>
+
+            <!-- Main Content -->
+            <main>
+
+                <!-- About Section -->
+                <section class="About">
+                    <div class="img">
+                        <img src="../Assets/3.jpg" alt="">
+                    </div>
+                    <style>
+                        .img img {
+                            width: 800px;
+                            height: 350px;
+                        }
+
+                        .About {
+                            display: flex;
+                        }
+
+                        .about {
+                            text-align: left;
+                            padding-left: 60px;
+                        }
+                    </style>
+                    <div class="about">
+                        <h1>About PRISM</h1>
+                        <p><b>Welcome to PRISM Watches, where we blend timeless craftsmanship with modern innovation.
+                                Our mission is to provide high-quality watches that resonate with style, durability, and
+                                elegance. Every watch tells a story, that has captured little moments of our life. Our
+                                mission is to combine timeless elegance with modern innovation, we craft more than just
+                                watch, we create stories, memory for people that last last for lifetime. 'Prism' is
+                                founded with a passion for precision. Our design merge timeless aesthetics with
+                                cutting-edge technology, offering various features without compromising style. Discover
+                                the art of timekeeping redefined. Explore our collections and become a part of the Prism
+                                story.</b></p>
+                    </div>
+                </section>
+                <h2 style="color: white; position: relative; left: 700px; top: 50px;">Our Team</h2>
+                <!-- Team Section -->
+                <section class="team">
+                    <div class="team-grid">
+                        <div class="team">
+                            <div class="team-member">
+                                <img src="../Assets/Ishan.jpg" alt="Ishan Bajracharya">
+                                <h3>Ishan Bajracharya</h3>
+                                <p><strong>Position:</strong> Technical Lead</p>
+                                <p><strong>Qualification:</strong><br>Uniglobe S.S (2022-2024, +2 Degree)</p>
+                                <p><strong>Skills:</strong><br>Python, Ethical Hacking, Power BI</p>
+                                <p><strong>Contact:</strong><br>9813450701<br>Email: bajracharya.ishan1@gmail.com</p>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="../Assets/pramish.jpg" alt="Pramish Devkota">
+                                <h3>Pramish Devkota</h3>
+                                <p><strong>Position:</strong> CEO</p>
+                                <p><strong>Qualification:</strong><br>Kathmandu Model College (2022-2024, +2 Degree)</p>
+                                <p><strong>Skills:</strong><br>Web Designing, Writing Skills, Research Skills</p>
+                                <p><strong>Contact:</strong><br>9745990859<br>Email: pramishpramish1@gmail.com</p>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="../Assets/Prishma.jpg" alt="Prishma Dahal">
+                                <h3>Prishma Dahal</h3>
+                                <p><strong>Position:</strong> Founder</p>
+                                <p><strong>Qualification:</strong><br>Prasadi Academy (2023-2024, +2 Degree)</p>
+                                <p><strong>Skills:</strong><br>Web Designing, Power BI, Basic Computing Skills, Public
+                                    Speaking, Social Interaction</p>
+                                <p><strong>Contact:</strong><br>9762883484<br>Email: prishmadahal48@gmail.com</p>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="../Assets/Sneha.jpg" alt="Sneha Singh">
+                                <h3>Sneha Singh</h3>
+                                <p><strong>Position:</strong> Creative Designer</p>
+                                <p><strong>Qualification:</strong><br>Trinity International College (2023-2024, +2
+                                    Degree)</p>
+                                <p><strong>Skills:</strong><br>Basic Computing Skills, Public Speaking, Social
+                                    Interaction</p>
+                                <p><strong>Contact:</strong><br>9746577733<br>Email: snehaexecutivenp@gmail.com</p>
+                            </div>
+
+                            <div class="team-member">
+                                <img src="../Assets/Ritesh.jpg" alt="Ritesh Shah">
+                                <h3>Ritesh Shah</h3>
+                                <p><strong>Position:</strong> Manager</p>
+                                <p><strong>Qualification:</strong><br>Kathmandu Model College (2021-2023, +2 Degree)</p>
+                                <p><strong>Skills:</strong><br>HTML, Python, CSS</p>
+                                <p><strong>Contact:</strong><br>974934490<br>Email: riteshshahofficial3@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="Feedback Form">
+                            <form onsubmit="HandleSubmit()">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name">
+
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email">
+
+                                <label for="message">Message:</label>
+                                <textarea id="message" name="message" rows="4"></textarea>
+                                <button type="submit">Submit</button>
+                            </form>
+                        </div>
+                </section>
+            </main>
+
+
+            <!-- Footer -->
+            <div class="footer">
+                <div class="footer-top"><!-- shows brand logo and a little description-->
+                    <div class="footerlogo">
+                        <img src="../Assets/1.jpg" alt="" class="footer-logo-image">
+                    </div>
+                    <div class="text-part">
+                        <p>
+                            Prism is a leading, luxurious timepieces brand in Nepal, providing immense luxury, elegant
+                            designs and boundless precision.<br>
+                            Starting from demure classics to durable sport models, Prism has the watch of your choice
+                            for every occasion and journey.<br>
+                            Let your journey begin and dive into the depths of immense collection of luxury.<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="contact"><!-- Shows contact details-->
+                        <h2>Contact Us</h2> <br>
+                        <p>
+                            Address : Kamalpokari,<br>
+                            Kathmandu,Bagmati, Nepal <br>
+                            Email No. : prism@gmail.com <br>
+                            Phone No. : 01-45321002 <br>
+                            Website : www.prism.watch.com <br>
+                        </p>
+                    </div>
+                    <div class="pages"> <!--Footer navigation links-->
+                        <h2>Pages</h2><br>
+                        <a href="../Home_Page/index.html">Home</a> <br>
+                        <a href="../Pages/Blog_Page.html">Blog</a> <br>
+                        <a href="../Pages/Product_Page.html">Product</a> <br>
+                        <a href="../Pages/Research_Page.html">Research</a> <br>
+                        <a href="../Pages/About_us_Page.html">About Us</a> <br>
+                    </div>
+                    <div class="services"> <!--Shows services provided by the brand-->
+                        <h2>Our services</h2> <br>
+                        <p>
+                            Customer Service <br>
+                            Returns & Exchanges <br>
+                            Shipping & Delivery <br>
+                            Privacy Policies <br>
+                            Terms & Condtions <br>
+                            F.A.Q
+                        </p>
+                    </div>
+                    <div class="photos"> <!-- Social media links-->
+                        <h2>Follow us on</h2><br>
+                        <div class="image-photos">
+                            <img src="../Assets/facebook.png" alt="">
+                            <img src="../Assets/insta.png" alt="">
+                            <img src="../Assets/twitter.png" alt="">
+                            <img src="../Assets/yt.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <!-- Copyright section-->
+                <div class="copy-right">
+                    Prism Collection &copy; 2025, All Rights Reserved
+                </div>
+                    
+            </div>
+            </footer>
+            <script src="../JS/pramish.js"></script>
+</body>
+
+</html>

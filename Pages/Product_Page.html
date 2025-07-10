@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product</title>
+
+  <style>
+    /* Home Page Linkkk Css Style */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      overflow-y: none;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    .container {
+      height: auto;
+      max-width: 100%;
+    }
+
+    .top-part {
+      width: 100%;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 145%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .topnav {
+      width: 100%;
+      background-color: rgb(62, 61, 61);
+      display: flex;
+    }
+
+    .email {
+      display: flex;
+      padding: 10px;
+      flex: 50%;
+      width: 50%;
+    }
+
+    .mail-icon {
+      height: 35px;
+      width: 35px;
+    }
+
+    .gmail {
+      color: white;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: larger;
+
+    }
+
+    .links :hover {
+      color: rgb(67, 112, 223);
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+
+    /* imageeeee slider cssss  */
+    .hero {
+      display: flex;
+      color: white;
+      position: relative;
+      top: 60px;
+    }
+
+    .hero-content {
+      animation: fadeIn 1s ease-out;
+    }
+
+    .hero-content h1 {
+      margin-left: 20%;
+      font-size: 60px;
+      width: 100px;
+      color: gold;
+    }
+
+
+    .hero-content p {
+      font-size: 20PX;
+      margin-left: 20%;
+      width: 320px;
+      margin-top: 5%;
+      color: gold;
+    }
+
+    .hero-content .shop {
+      margin-left: 90px;
+      margin-top: 5%;
+      font-size: 20px;
+      background-color: black;
+      color: white;
+    }
+
+    .hero-content .shop:hover {
+      transition: 2s all ease;
+      cursor: pointer;
+      padding-left: 5px;
+      background-color: #3ba3e6;
+    }
+
+
+
+
+
+    /* Product Page Specific Styles */
+    .filters {
+      padding: 30px;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .filter-button {
+      padding: 6px 20px;
+      border: none;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .filter-button:hover {
+      background: gold;
+      color: white;
+      border-color: gold;
+    }
+
+    .products-grid {
+      display: flex;
+      gap: 3%;
+      padding: 50px 5px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+
+    .producttt {
+      display: flex;
+      gap: 3%;
+      padding: 50px 5px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+
+
+
+    .product-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .product-image {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    .product-info {
+      padding: 5%;
+    }
+
+    .product-name {
+      font-size: 20px;
+      margin-bottom: 2%;
+    }
+
+    .product-price {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 5%;
+    }
+
+    .product-features {
+      font-size: 16px;
+      color: #888;
+      margin-bottom: 5%;
+    }
+
+    .buy-button {
+      display: block;
+      width: 100%;
+      padding: 12px;
+      background: #1a1a1a;
+      color: white;
+      text-align: center;
+      text-decoration: none;
+      border-radius: 4px;
+      transition: background 0.3s ease;
+    }
+
+    .buy-button:hover {
+      background: gold;
+    }
+
+
+    .read button {
+      font-size: 30px;
+      text-align: center;
+      width: 12%;
+      margin-left: 45%;
+      margin-bottom: 5%;
+
+    }
+
+    .read button:hover {
+      color: gold;
+      transition: 1s;
+      cursor: pointer;
+      background-color: black;
+      padding-left: 2%;
+    }
+
+
+
+
+
+
+
+    /* Footerr Linkk CSS */
+    .footer {
+      box-sizing: border-box;
+      background-color: black;
+    }
+
+    .footer-top {
+      display: flex;
+    }
+
+    .footerlogo {
+      padding: 10px;
+    }
+
+    .footer-logo-image {
+      height: 18vh;
+      width: 100%;
+      flex: 30%;
+    }
+
+    .text-part {
+      color: white;
+      flex: 70%;
+      margin-top: 50px;
+      font-size: larger;
+    }
+
+    .footer-bottom {
+      padding: 20px;
+      display: flex;
+      background-color: black;
+    }
+
+    .contact {
+      flex: 25%;
+    }
+
+    .contact p {
+      color: white;
+      font-size: larger;
+    }
+
+    .contact h2 {
+      color: white;
+      font-size: xx-large;
+    }
+
+    .pages a {
+      color: white;
+      text-decoration: none;
+      font-size: large;
+    }
+
+    .pages h2 {
+      color: white;
+      font-size: xx-large;
+    }
+
+    .pages a:hover {
+      color: rgb(57, 98, 232);
+    }
+
+    .pages {
+      flex: 25%;
+
+    }
+
+    .services {
+      flex: 25%;
+    }
+
+    .services p {
+      color: white;
+      font-size: large;
+    }
+
+    .services h2 {
+      color: white;
+      font-size: xx-large;
+    }
+
+    .copy-right {
+      box-sizing: border-box;
+      padding: 10px;
+      background-color: rgb(68, 65, 65);
+      text-align: center;
+      color: white;
+    }
+
+    .photos {
+      display: inline-block;
+      flex: 10%;
+    }
+
+    .photos img {
+      height: 30px;
+      width: 35px;
+      object-fit: cover;
+    }
+
+    .image-photos {
+      margin-left: -10px;
+    }
+
+    .photos h2 {
+      color: white;
+      font-size: x-large;
+    }
+
+    .review1,
+    .review2,
+    .review3 {
+      border-radius: 30px;
+      gap: 2rem;
+      margin-left: 40px;
+      box-shadow: 0 4px 6px gray;
+      padding: 5px;
+      display: inline-block;
+      height: 60vh;
+      width: auto;
+    }
+
+    .review1:hover {
+      box-shadow: 0px 6px 8px;
+      transform: scale(1.01);
+    }
+
+    .review2:hover {
+      box-shadow: 0px 6px 8px;
+      transform: scale(1.01);
+    }
+
+    .review3:hover {
+      box-shadow: 0px 6px 8px;
+      transform: scale(1.01);
+    }
+
+    .review-text {
+      display: block;
+      text-align: center;
+    }
+
+    .review-text h2 {
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+
+    .review-text p {
+      font-weight: 800;
+    }
+
+    .star-text {
+      font-weight: bold;
+      text-align: center;
+      font-size: x-large;
+    }
+
+    .art {
+      gap: 1rem;
+      margin: auto;
+    }
+
+    .art1,
+    .art2,
+    .art3,
+    .art4 {
+      border-radius: 30px;
+      gap: 1rem;
+      margin-left: 25px;
+      box-shadow: 0 4px 6px gray;
+      padding: 5px;
+      height: 44vh;
+      width: auto;
+    }
+
+    .art1:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    .art2:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    .art3:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    .art4:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    #n-slider {
+      width: 1600px;
+      height: 600px;
+      overflow: hidden;
+      margin-top: -425px;
+      text-align: center;
+    }
+
+    #n-slider img {
+      width: 100%;
+      height: 120%;
+      display: none;
+    }
+
+    #n-slider img.ns {
+      display: block;
+    }
+  </style>
+
+
+</head>
+
+<body>
+
+  <!-- hompage link -->
+  <div class="container">
+    <div class="top-part">
+      <div class="topnav">
+        <div class="email">
+          <img src="../Assets/7.png" alt="" class="mail-icon">
+          <div class="gmail">prism@gmail.com</div>
+        </div>
+        <div class="links">
+          <a href="../Home_Page/index.html">Home</a>
+          <a href="../Pages/Blog_Page.html">Blog</a>
+          <a href="../Pages/Product_Page.html">Product</a>
+          <a href="../Pages/Research_Page.html">Research</a>
+          <a href="../Pages/About_us_Page.html">About us</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main>
+
+    <section class="hero" id="hero">
+      <div class="hero-content">
+        <h1>SELECT YOUR NEW PERFECT STYLE</h1>
+        <p>NEW ARRIVALS 2025</p>
+        <a href=""> <button class="shop">SHOP NOW</button> </a>
+      </div>
+    </section>
+
+
+    <div id="n-slider">
+      <img src="../Assets/hands-1866619_1280.jpg" class="ns" alt="Image 1">
+      <img src="../Assets/rolex-4807479_640.jpg" alt="Image 2">
+      <img src="../Assets/watch-7433126_640.jpg" alt="Image 3">
+    </div>
+
+    <script>
+      const image = document.querySelectorAll("#n-slider img");
+      let currentIndex = 0;
+      function nextImage() {
+        image[currentIndex].classList.remove("ns");
+        currentIndex = (currentIndex + 1) % image.length;
+        image[currentIndex].classList.add("ns");
+      }
+
+      setInterval(nextImage, 3000);
+
+    </script>
+
+
+    <section class="filters">
+      <button class="filter-button">All Watches</button>
+      <button class="filter-button">Classic Series</button>
+      <button class="filter-button">Sport Series</button>
+      <button class="filter-button">Luxury Series</button>
+      <button class="filter-button">Limited Edition</button>
+    </section>
+
+    <main class="products-grid">
+      <div class="product-card">
+        <a href="../Pages/Product_Description_Page.HTML"> <img src="../Assets/WATCH1111111.png" alt="Classic Gold Watch"
+            class="product-image" /></a>
+        <div class="product-info">
+          <h3 class="product-name">ROLEX WATCH</h3>
+          <p class="product-price"> <del style="color: red;">Npr.34,999</del></p>
+          <p class="product-price">Npr.24,999</p>
+          <p class="product-features">
+            best rate user review 18K Gold • Water Resistant
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+
+
+      <div class="product-card">
+        <img src="../Assets/male-watch-144648_640.jpg" alt="Sport Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Sport Diver Pro</h3>
+          <p class="product-price"> <del style="color: red;">Npr.5,999</del></p>
+          <p class="product-price">Nrp.3,299</p>
+          <p class="product-features">
+            300m Water Resistant • Ceramic Bezel • Luminous Dial
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../Assets/pexels-ferarcosn-190819.jpg" alt="Luxury Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Luxury Tourbillon</h3>
+          <p class="product-price"> <del style="color: red;">Npr.15,999</del></p>
+          <p class="product-price">Nrp.12,999</p>
+          <p class="product-features">
+            Tourbillon Movement • Diamond Indices • Alligator Strap
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../Assets/pexels-photo-2113994.jpeg" alt="Limited Edition Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Limited Skeleton Edition</h3>
+          <p class="product-price"> <del style="color: red;">Npr.12,999</del></p>
+          <p class="product-price">Nrp.8,499</p>
+          <p class="product-features">
+            Skeleton Dial • Rose Gold • Limited to 100 pieces
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+    </main>
+
+    <main class="producttt">
+      <div class="product-card">
+        <img src="../Assets/pexels-pixabay-280250.jpg" alt="Smart Hybrid Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Smart Hybrid Classic</h3>
+          <p class="product-price"> <del style="color: red;">Npr.20,999</del></p>
+          <p class="product-price">Nrp.15,899</p>
+          <p class="product-features">
+            Smart Features • Classic Design • Activity Tracking
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../Assets/pocket-watch-560937_640.jpg" alt="Ladies Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Ladies Moonphase</h3>
+          <p class="product-price"> <del style="color: red;">Npr.34,999</del></p>
+          <p class="product-price">Nrp.44,299</p>
+          <p class="product-features">
+            Moonphase Complication • Mother of Pearl • Diamonds
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../Assets/watch-7204674_640.jpg" alt="Pilot Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Pilot Chronograph</h3>
+          <p class="product-price"> <del style="color: red;">Npr.40,999</del></p>
+          <p class="product-price">Nrp.30,799</p>
+          <p class="product-features">
+            GMT Function • Anti-Magnetic • Titanium Case
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="../Assets/watch-7433126_640.jpg" alt="Dress Watch" class="product-image" />
+        <div class="product-info">
+          <h3 class="product-name">Dress Ultra-Thin</h3>
+          <p class="product-price"> <del style="color: red;">Npr.25,999</del></p>
+          <p class="product-price">Nrp.20,999</p>
+          <p class="product-features">
+            Ultra-Thin Case • Hand-Wound • Platinum
+          </p>
+          <a href="#" class="buy-button" onclick="addToCart()">Add to Cart</a>
+        </div>
+      </div>
+    </main>
+
+
+    <div class="read">
+      <button>Read More</button>
+    </div>
+
+
+
+    <!-- footer link -->
+    <footer>
+      <div class="footer-bottom">
+        <div class="contact">
+          <h2>Contact Us</h2> <br>
+          <p>
+            Address : Kamalpokari,<br>
+            Kathmandu,Bagmati, Nepal <br>
+            Email No. : prism@gmail.com <br>
+            Phone No. : 01-45321002 <br>
+            Website : www.prism.watch.com <br>
+          </p>
+        </div>
+        <div class="pages">
+          <h2>Pages</h2><br>
+          <a href="../Home_Page/index.html">Home</a> <br>
+          <a href="../Pages/Blog_Page.html">Blog</a> <br>
+          <a href="../Pages/Product_Page.html">Product</a> <br>
+          <a href="../Pages/Research_Page.html">Research</a> <br>
+          <a href="../Pages/About_us_Page.html">About Us</a> <br>
+        </div>
+        <div class="services">
+          <h2>Our services</h2> <br>
+          <p>
+            Customer Service <br>
+            Returns & Exchanges <br>
+            Shipping & Delivery <br>
+            Privacy Policies <br>
+            Terms & Condtions <br>
+            F.A.Q
+          </p>
+        </div>
+        <div class="photos">
+          <h2>Follow us on</h2><br>
+          <div class="image-photos">
+            <img src="../Assets/facebook.png" alt="facebook">
+            <img src="../Assets/insta.png" alt="instagram">
+            <img src="../Assets/twitter.png" alt="twitter">
+            <img src="../Assets/yt.png" alt="youtube">
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        Prism Collection &copy; 2025, All Rights Reserved
+      </div>
+      </div>
+    </footer>
+
+    <script>
+      function addToCart() {
+        alert("Item has been added to the cart!");
+      }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,783 @@
+*
+
+/*General reset for margin padding and box-sizing*/
+    {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /*General body styles*/
+    overflow-y: none;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+.container
+
+/*main container styles*/
+    {
+    height: auto;
+    max-width: 100%;
+}
+
+.top-part {
+    /*top section styling*/
+    width: 100%;
+}
+
+.background-video
+
+/*background video styling*/
+    {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 145%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.topnav
+
+/*nav bar styling*/
+    {
+    width: 100%;
+    background-color: rgb(62, 61, 61);
+    display: flex;
+}
+
+.email
+
+/*nav bar icon styling*/
+    {
+    display: flex;
+    padding: 10px;
+    flex: 50%;
+    width: 50%;
+}
+
+.mail-icon
+
+/*nav bar icon styling*/
+    {
+    height: 35px;
+    width: 35px;
+}
+
+.gmail
+
+/*nav bar icon styling*/
+    {
+    color: white;
+    align-items: center;
+    padding: 5px;
+}
+
+.links
+
+/*nav bar hyperlink styling*/
+    {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    margin-top: 5px;
+    font-size: larger;
+
+}
+
+.links :hover
+
+/*nav bar hyper link styling on hover*/
+    {
+    color: rgb(67, 112, 223);
+}
+
+.links a
+
+/*nav bar hyper link styling*/
+    {
+    color: white;
+    text-decoration: none;
+}
+
+.menu
+
+/*nav bar icon styling*/
+    {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.bar
+
+/*nav bar icon styling*/
+    {
+    height: 30px;
+    width: 30px;
+}
+
+nav
+
+/*nav bar styling*/
+    {
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 15px;
+    width: 100%;
+    display: flex;
+
+}
+
+.nav
+
+/*nav bar styling*/
+    {
+    height: 800px;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.logo
+
+/*logo styling*/
+    {
+    height: 80px;
+    width: fit-content;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: 216px;
+}
+
+.logo1,
+.logo2,
+.logo3,
+.logo4
+
+/*logo styling*/
+    {
+    height: 30px;
+    width: 30px;
+}
+
+.searchbar
+
+/*search bar styling*/
+    {
+    text-align: center;
+    background-color: rgb(37, 36, 36);
+    border-radius: 20px;
+    border: 1px solid rgb(97, 97, 97);
+    font-size: 17px;
+    padding: 10px 10px;
+    color: white;
+
+}
+
+::placeholder
+
+/*search bar's placeholder styling*/
+    {
+    color: white;
+}
+
+.icons
+
+/*nav bar icon styling*/
+    {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.word1
+
+/*text styling*/
+    {
+    left: 450px;
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.word2
+
+/*text styling*/
+    {
+    font-size: 45px;
+    left: 590px;
+    position: absolute;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.word3
+
+/*text styling*/
+    {
+    color: white;
+    margin-top: 450px;
+    font-size: xx-large;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.middlepart
+
+/*middle part styling*/
+    {
+    box-sizing: border-box;
+    display: flex;
+    max-width: 100%;
+    margin: auto;
+}
+
+.logopart
+
+/*logo part styling*/
+    {
+    padding: 10px 10px;
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    flex: 30%;
+    max-width: 30%;
+
+}
+
+.minilogo
+
+/*logo styling*/
+    {
+    height: auto;
+    width: 300px;
+
+}
+
+.textpart
+
+/*text part styling*/
+    {
+    width: 70%;
+    flex: 70%;
+}
+
+.text-large
+
+/*text-large styling*/
+    {
+    color: gray;
+    margin: 30px 0px 0px 0px;
+}
+
+.lowermiddlepart
+
+/*lower-middle-part styling*/
+    {
+    margin-bottom: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+
+}
+
+.largetext
+
+/*large text styling*/
+    {
+    flex: 50%;
+    width: 50%;
+}
+
+.text-large
+
+/* text-large styling*/
+    {
+    font-size: 50px;
+}
+
+.sidetext
+
+/*side text styling*/
+    {
+    flex: 50%;
+    width: 50%;
+    margin-top: 40px;
+}
+
+.brands
+
+/*brands styling*/
+    {
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.top-brand
+
+/*top-brand styling*/
+    {
+    display: flex;
+    gap: 50px;
+}
+
+.brand1,
+.brand2,
+.brand3,
+.brand4,
+.brand5,
+.brand6,
+.brand7,
+.brand8
+
+/*brands styling*/
+    {
+    background-color: gray;
+    padding: 10px;
+    display: flex;
+    flex: 25%;
+    text-align: center;
+    border-radius: 10px;
+
+}
+
+.brand1 h2,
+.brand2 h2,
+.brand3 h2,
+.brand4 h2,
+.brand5 h2,
+.brand6 h2,
+.brand7 h2,
+.brand8 h2
+
+/*brands h2 styling*/
+    {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin: auto;
+}
+
+.bottom-brand
+
+/*bottom-brand styling*/
+    {
+    display: flex;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.products
+
+/*styling of products*/
+    {
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+}
+
+.products h1
+
+/*styling of product's h1*/
+    {
+    margin-bottom: 10px;
+}
+
+.deep-sea,
+.titan,
+.bre,
+.tudor
+
+/*styling of product's items*/
+    {
+    height: 320px;
+    width: 250px;
+    box-shadow: 6px 0px 6px gray;
+    border-radius: 10%;
+
+}
+
+.tudor {
+    margin-top: 20px;
+}
+
+.deep-sea:hover
+
+/*styling of items on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 8px 0 8px;
+}
+
+.titan:hover
+
+/*styling of items on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 8px 0 8px;
+}
+
+.bre:hover
+
+/*styling of items on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 8px 0 8px;
+}
+
+.tudor:hover
+
+/*styling of items on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 8px 0 8px;
+}
+
+table
+
+/*styling of table tag*/
+    {
+    margin: auto;
+}
+
+table td
+
+/*styling of table's data*/
+    {
+    text-align: center;
+    padding: 30px;
+}
+
+.title h2
+
+/*styling of title h2*/
+    {
+
+    width: 250px;
+    margin-top: -4px;
+
+}
+
+.products
+
+/*styling of products*/
+    {
+    margin-top: 10px;
+}
+
+.link
+
+/*styling of links*/
+    {
+    position: absolute;
+    left: 50px;
+}
+
+.link a:hover {
+    color: rgb(44, 83, 238);
+}
+
+.linka
+
+/*styling of hyperlink*/
+    {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.linka :hover {
+    color: purple;
+}
+
+.arrow
+
+/*styling of arrow*/
+    {
+    height: 40px;
+    width: 40px;
+    top: -8px;
+    position: absolute;
+}
+
+.sale
+
+/*styling of sale*/
+    {
+    box-sizing: border-box;
+    padding: 10px;
+
+}
+
+.sale-image {
+    height: 600px;
+    width: 100%;
+    box-shadow: 0px 4px 6px black;
+}
+
+.about-us {
+    margin: auto;
+    display: flex;
+}
+
+.main-photoss {
+    display: flex;
+    gap: 48px;
+    margin-left: 150px;
+}
+
+.photoss img {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+}
+
+.photoss h4 {
+    text-align: center;
+}
+
+.footer
+
+/*styling of footer section*/
+    {
+    box-sizing: border-box;
+    background-color: black;
+}
+
+.footer-top
+
+/*styling of footer-top*/
+    {
+    display: flex;
+}
+
+.footerlogo {
+    padding: 10px;
+}
+
+.footer-logo-image {
+    height: 120px;
+    width: 100%;
+    flex: 30%;
+}
+
+.text-part {
+    color: white;
+    flex: 70%;
+    margin-top: 50px;
+    font-size: larger;
+}
+
+.footer-bottom {
+    padding: 20px;
+    display: flex;
+}
+
+.contact {
+    flex: 25%;
+}
+
+.contact p {
+    color: white;
+    font-size: larger;
+}
+
+.contact h2 {
+    color: white;
+    font-size: xx-large;
+}
+
+.pages a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+}
+
+.pages h2 {
+    color: white;
+    font-size: xx-large;
+}
+
+.pages a:hover {
+    color: rgb(57, 98, 232);
+}
+
+.pages {
+    flex: 25%;
+
+}
+
+.services {
+    flex: 25%;
+}
+
+.services p {
+    color: white;
+    font-size: large;
+}
+
+.services h2 {
+    color: white;
+    font-size: xx-large;
+}
+
+.copy-right
+
+/*styling of copy right part*/
+    {
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(68, 65, 65);
+    text-align: center;
+    color: white;
+}
+
+.photos {
+    display: inline-block;
+    flex: 10%;
+}
+
+.photos img {
+    height: 30px;
+    width: 35px;
+
+}
+
+.image-photos {
+    margin-left: -10px;
+}
+
+.photos h2 {
+    color: white;
+    font-size: x-large;
+}
+
+.review1,
+.review2,
+.review3
+
+/*styling of review section*/
+    {
+    border-radius: 30px;
+    gap: 32px;
+    margin-left: 40px;
+    box-shadow: 0 4px 6px gray;
+    padding: 5px;
+    display: inline-block;
+    height: 347px;
+    width: auto;
+}
+
+.review1:hover
+
+/*styling of review on hover*/
+    {
+    box-shadow: 0px 6px 8px;
+    transform: scale(1.01);
+}
+
+.review2:hover
+
+/*styling of review on hover*/
+    {
+    box-shadow: 0px 6px 8px;
+    transform: scale(1.01);
+}
+
+.review3:hover
+
+/*styling of review on hover*/
+    {
+    box-shadow: 0px 6px 8px;
+    transform: scale(1.01);
+}
+
+.review-text
+
+/*styling of review-text*/
+    {
+    display: block;
+    text-align: center;
+}
+
+.review-text h2 {
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.review-text p {
+    font-weight: 800;
+}
+
+.star-text
+
+/*styling of star-text*/
+    {
+    font-weight: bold;
+    text-align: center;
+    font-size: x-large;
+}
+
+.art
+
+/*styling of art section*/
+    {
+    gap: 16px;
+    margin: auto;
+}
+
+.art1,
+.art2,
+.art3,
+.art4 {
+    border-radius: 30px;
+    gap: 16px;
+    margin-left: 25px;
+    box-shadow: 0 4px 6px gray;
+    padding: 5px;
+    height: 256px;
+    width: auto;
+}
+
+.art1:hover
+
+/*styling of art on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 0 6px 8px;
+}
+
+.art2:hover
+
+/*styling of art on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 0 6px 8px;
+}
+
+.art3:hover
+
+/*styling of art on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 0 6px 8px;
+}
+
+.art4:hover
+
+/*styling of art on hover*/
+    {
+    transform: scale(1.01);
+    box-shadow: 0 6px 8px;
+}

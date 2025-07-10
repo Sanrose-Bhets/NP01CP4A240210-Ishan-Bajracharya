@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Prishma Dahal" />
+    <title>login-page</title>
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-y: none;
+            overflow-x: hidden;
+            max-width: 100%;
+            background-color: rgb(45, 141, 244);
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        .container {
+            height: 50px;
+            max-width: 100%;
+
+        }
+
+        .topnav {
+            width: 100%;
+            background-color: rgb(62, 61, 61);
+            display: flex;
+        }
+
+        .email {
+            display: flex;
+            padding: 10px;
+            flex: 50%;
+            width: 50%;
+        }
+
+        .mail-icon {
+            height: 35px;
+            width: 35px;
+        }
+
+        .gmail {
+            color: white;
+            align-items: center;
+            padding: 5px;
+        }
+
+        .links {
+            display: flex;
+            gap: 30px;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: larger;
+
+        }
+
+        .links :hover {
+            color: rgb(67, 112, 223);
+        }
+
+        .links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .bar {
+            height: 30px;
+            width: 30px;
+        }
+
+        nav {
+            background-color: black;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            padding: 0 15px;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .nav {
+            height: 800px;
+            background-repeat: no-repeat;
+            width: 100%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: fit-content;
+            align-items: center;
+            justify-content: space-around;
+            margin-left: auto;
+            margin-right: 200px;
+        }
+
+        .logo1,
+        .logo2,
+        .logo3,
+        .logo4 {
+            height: 30px;
+            width: 30px;
+        }
+
+        .searchbar {
+            text-align: center;
+            background-color: rgb(37, 36, 36);
+            border-radius: 20px;
+            border: 1px solid rgb(255, 255, 255);
+            font-size: 17px;
+            padding: 10px 10px;
+            color: rgb(156, 151, 151);
+
+        }
+
+        ::placeholder {
+            color: white;
+        }
+
+        .icons {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .login-form {
+            width: 500px;
+            border-radius: 20px;
+            display: flex;
+            padding: 20px 40px 20px 40px;
+            justify-content: center;
+            margin: auto;
+            flex-direction: column;
+            background-color: white;
+            height: 600px;
+        }
+
+        .login-form h2 {
+            font-size: 26px;
+            color: black;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .login-form h3 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            color: black;
+        }
+
+        .form-text {
+            padding: 20px;
+            border: 2px solid black;
+        }
+
+        .form {
+            margin-bottom: 15px;
+        }
+
+        .form ::placeholder {
+            color: gray;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 15px;
+            border: 2px solid black;
+            border-radius: 10px;
+            margin: auto;
+            background-color: rgb(220, 212, 212);
+        }
+
+        .remember-me a {
+            font-size: 18px;
+            text-decoration: none;
+            color: rgb(64, 116, 156);
+        }
+
+        .remember-me {
+            text-align: left;
+        }
+
+        .forgot-part {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .forgot {
+            text-align: right;
+
+        }
+
+        .forgot a {
+            font-size: 18px;
+            text-decoration: none;
+            color: rgb(64, 116, 156);
+        }
+
+        .forgot a:hover {
+            text-decoration: underline;
+        }
+
+        .remember-me a:hover {
+            text-decoration: underline;
+        }
+
+        .button {
+            display: block;
+            padding: 10px;
+            background: rgb(64, 116, 156);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            width: 30%;
+            cursor: pointer;
+            font-size: 16px;
+            text-align: center;
+            margin: auto;
+        }
+
+        .button:hover {
+            background: rgb(67, 112, 223);
+        }
+
+        .lines {
+            display: inline-flex;
+            margin: auto;
+
+        }
+
+        .line1 {
+
+            width: 80px;
+            margin-left: 40px;
+        }
+
+        .line2 {
+
+            width: 80px;
+        }
+
+        .text {
+            flex: 50%;
+            width: 30%;
+            font-size: medium;
+            margin: auto;
+            margin-right: 10px;
+        }
+
+        .lines img {
+            width: 50%;
+            height: auto;
+        }
+
+        .logos {
+            display: flex;
+            gap: 80px;
+            margin: auto;
+            cursor: pointer;
+        }
+
+        .logos img {
+            height: 80px;
+            width: 80px;
+        }
+
+        .photos {
+            display: inline-block;
+            flex: 15%;
+        }
+
+        .photos img {
+            height: 30px;
+            width: 40px;
+
+        }
+
+        .image-photos {
+            margin-left: -15px;
+        }
+
+        .photos h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .footer {
+            box-sizing: border-box;
+            background-color: black;
+        }
+
+        .footer-top {
+            display: flex;
+        }
+
+        .footerlogo {
+            padding: 10px;
+        }
+
+        .footer-logo-image {
+            height: 100px;
+            width: 100%;
+            flex: 30%;
+        }
+
+        .text-part {
+            color: white;
+            flex: 70%;
+            margin-top: 50px;
+            font-size: large;
+        }
+
+        .footer-bottom {
+            padding: 20px;
+            display: flex;
+        }
+
+        .contact {
+            flex: 25%;
+        }
+
+        .contact p {
+            color: white;
+            font-size: larger;
+        }
+
+        .contact h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .pages a {
+            color: white;
+            text-decoration: none;
+            font-size: large;
+        }
+
+        .pages h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .pages a:hover {
+            color: rgb(57, 98, 232);
+        }
+
+        .pages {
+            flex: 25%;
+
+        }
+
+        .services {
+            flex: 25%;
+        }
+
+        .services p {
+            color: white;
+            font-size: large;
+        }
+
+        .services h2 {
+            color: white;
+            font-size: xx-large;
+        }
+
+        .copy-right {
+            box-sizing: border-box;
+            padding: 10px;
+            background-color: rgb(68, 65, 65);
+            text-align: center;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="topnav">
+            <div class="email">
+                <img src="../Assets/7.png" alt="" class="mail-icon">
+                <div class="gmail">prism@gmail.com</div>
+            </div>
+            <div class="links">
+                <a href="../Home_Page/index.html">Home</a>
+                <a href="../Pages/Blog_Page.html">Blog</a>
+                <a href="../Pages/Product_Page.html">Product</a>
+                <a href="../Pages/Research_Page.html">Research</a>
+                <a href="../Pages/About_us_Page.html">About us</a>
+            </div>
+        </div>
+        <div class="nav">
+            <nav>
+                <div class="menu">
+                    <img src="../Assets/1.png" alt="" class="bar">
+                    <h3 style="color: white;">Menu</h3>
+                </div>
+                <img src="../Assets/1.jpg" alt="" class="logo">
+                <div class="icons">
+                    <img src="../Assets/2.png" alt="" class="logo1">
+                    <input type="text" placeholder="Search here" class="searchbar">
+                    <img src="../Assets/3.png" alt="" class="logo2">
+                    <img src="../Assets/4.png" alt="" class="logo3">
+                    <img src="../Assets/5.png" alt="" class="logo4">
+
+                </div>
+            </nav><br><br><br><br>
+            <div class="login-form">
+                <h2>LOGIN</h2><br>
+                <h3>Welcome Back!</h3>
+                <h3>It's great to have you here again!</h3><br><br>
+                <div class="form-text">
+                    <form onsubmit="functio()">
+                        <div class="form">
+                            <input type="text" id="username" placeholder="Enter Your Username">
+                        </div>
+                        <div class="form">
+                            <input type="password" id="password" placeholder="Enter Your Password">
+                        </div>
+                </div><br>
+                <div class="forgot-part">
+                    <div class="remember-me">
+                        <a href="#">Remember me</a>
+                        <input type="radio" name="" id="">
+                    </div>
+                    <div class="forgot">
+                        <a href="">Forget password??</a>
+                    </div>
+                </div><br>
+                <button type="submit" class="button">Login</button>
+                </form><br><br>
+
+                <div class="lines">
+                    <div class="line1">
+                        <img src="../Assets/line.jpg" alt="">
+                    </div>
+                    <div class="text">
+                        <h3>Or Login With</h3>
+                    </div>
+                    <div class="line2">
+                        <img src="../Assets/line.jpg" alt="">
+                    </div>
+                    <br>
+                </div>
+                <div class="logos">
+                    <div class="goggle">
+                        <img src="../Assets/google.png" alt="">
+                    </div>
+                    <div class="fb">
+                        <img src="../Assets/fb.png" alt="">
+                    </div>
+                    <div class="apple">
+                        <img src="../Assets/apple.png" alt="">
+                    </div>
+                </div>
+            </div><br><br><br><br>
+
+        </div>
+        <div class="footer">
+            <div class="footer-top">
+                <div class="footerlogo">
+                    <img src="../Assets/1.jpg" alt="" class="footer-logo-image">
+                </div>
+                <div class="text-part">
+                    <p>Prism is a leading, luxurious timepieces brand in Nepal, providing immense luxury, elegant
+                        designs and boundless precision. <br>
+                        Starting from demure classics to durable sport models, Prism has the watch of your choice for
+                        every occasion and journey. <br>
+                        Let your journey begin and dive into the depths of immense collection of luxury. <br></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="contact">
+                    <h2>Contact Us</h2> <br>
+                    <p>
+                        Address : Kamalpokari,<br>
+                        Kathmandu,Bagmati, Nepal <br>
+                        Email No. : prism@gmail.com <br>
+                        Phone No. : 01-45321002 <br>
+                        Website : www.prism.watch.com <br>
+                    </p>
+                </div>
+                <div class="pages">
+
+                    <h2>Pages</h2><br>
+                    <a href="../Home_Page/index.html">Home</a> <br>
+                    <a href="../Pages/Blog_Page.html">Blog</a> <br>
+                    <a href="../Pages/Product_Page.html">Product</a> <br>
+                    <a href="../Pages/Research_Page.html">Research</a> <br>
+                    <a href="../Pages/About_us_Page.html">About Us</a> <br>
+                </div>
+                <div class="services">
+                    <h2>Our services</h2> <br>
+                    <p>
+                        Customer Service <br>
+                        Returns & Exchanges <br>
+                        Shipping & Delivery <br>
+                        Privacy Policies <br>
+                        Terms & Condtions <br>
+                        F.A.Q
+                    </p>
+                </div>
+                <div class="photos">
+                    <h2>Follow us on</h2><br>
+                    <div class="image-photos">
+                        <img src="../Assets/facebook.png" alt="">
+                        <img src="../Assets/insta.png" alt="">
+                        <img src="../Assets/twitter.png" alt="">
+                        <img src="../Assets/yt.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="copy-right">
+                Prism Collection &copy; 2025, All Rights Reserved
+            </div>
+        </div>
+</body>
+
+</html>
+<script>
+    function functio() {
+        var Username = document.getElementById("username").value;
+        var Password = document.getElementById("password").value;
+
+        if (Username == "" || Password == "") {
+            alert("Please Fill All The Fields!!");
+        }
+
+        else if (Username == "admin" && Password == "admin") {
+            alert("Welcome admin!!");
+        }
+        else {
+            alert("Username or Password is Incorrect!!");
+        }
+    }
+</script>

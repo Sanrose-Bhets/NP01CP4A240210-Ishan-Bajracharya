@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    /* navbarrr linkkk cssss */
+
+    body {
+      overflow-y: none;
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    .container {
+      height: auto;
+      max-width: 100%;
+    }
+
+    .top-part {
+      width: 100%;
+    }
+
+    .background-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 145%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .topnav {
+      width: 100%;
+      background-color: rgb(62, 61, 61);
+      display: flex;
+    }
+
+    .email {
+      display: flex;
+      padding: 10px;
+      flex: 50%;
+      width: 50%;
+    }
+
+    .mail-icon {
+      height: 35px;
+      width: 35px;
+    }
+
+    .gmail {
+      color: white;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: larger;
+
+    }
+
+    .links :hover {
+      color: rgb(67, 112, 223);
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+    }
+
+
+
+
+      /* description sectionnnnnnn */
+
+    .about-section {
+      padding: 10px 10px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: flex;
+      gap: 10%;
+      align-items: center;
+      margin-bottom: 5px;
+    }
+
+    .about-image {
+      width: 1200px;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content h1 {
+      font-size: 40px;
+      margin-bottom: 25px;
+      color: #1a1a1a;
+    }
+
+    .about-content p {
+      line-height: 1.5;
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    .imagen {
+      display: flex;
+      gap: 10px;
+    }
+
+    .imagen .nikh {
+      border: 1px solid black;
+      width: 100px;
+      height: 50px;
+    }
+
+    .about-itemss span {
+      color: rgb(129, 90, 90);
+    }
+
+
+
+
+
+
+
+    /* Footerr Linkk CSS */
+    .footer {
+      box-sizing: border-box;
+      background-color: black;
+    }
+
+    .footer-top {
+      display: flex;
+    }
+
+    .footerlogo {
+      padding: 10px;
+    }
+
+    .footer-logo-image {
+      height: 18vh;
+      width: 100%;
+      flex: 30%;
+    }
+
+    .text-part {
+      color: white;
+      flex: 70%;
+      margin-top: 50px;
+      font-size: larger;
+    }
+
+    .footer-bottom {
+      padding: 20px;
+      display: flex;
+      background-color: black;
+    }
+
+    .contact {
+      flex: 25%;
+    }
+
+    .contact p {
+      color: white;
+      font-size: larger;
+    }
+
+    .contact h2 {
+      color: white;
+      font-size: xx-large;
+    }
+
+    .pages a {
+      color: white;
+      text-decoration: none;
+      font-size: large;
+    }
+
+    .pages h2 {
+      color: white;
+      font-size: xx-large;
+    }
+
+    .pages a:hover {
+      color: rgb(57, 98, 232);
+    }
+
+    .pages {
+      flex: 25%;
+
+    }
+
+    .services {
+      flex: 25%;
+    }
+
+    .services p {
+      color: white;
+      font-size: large;
+    }
+
+    .services h2 {
+      color: white;
+      font-size: xx-large;
+    }
+
+    .copy-right {
+      box-sizing: border-box;
+      padding: 10px;
+      background-color: rgb(68, 65, 65);
+      text-align: center;
+      color: white;
+    }
+
+    .photos {
+      display: inline-block;
+      flex: 10%;
+    }
+
+    .photos img {
+      height: 30px;
+      width: 35px;
+      object-fit: cover;
+    }
+
+    .image-photos {
+      margin-left: -10px;
+    }
+
+    .photos h2 {
+      color: white;
+      font-size: x-large;
+    }
+
+    .review1,
+    .review2,
+    .review3 {
+      border-radius: 30px;
+      gap: 2rem;
+      margin-left: 40px;
+      box-shadow: 0 4px 6px gray;
+      padding: 5px;
+      display: inline-block;
+      height: 60vh;
+      width: auto;
+    }
+
+    .review1:hover {
+      box-shadow: 0px 6px 8px;
+      transform: scale(1.01);
+    }
+
+    .review2:hover {
+      box-shadow: 0px 6px 8px;
+      transform: scale(1.01);
+    }
+
+    .review3:hover {
+      box-shadow: 0px 6px 8px;
+      transform: scale(1.01);
+    }
+
+    .review-text {
+      display: block;
+      text-align: center;
+    }
+
+    .review-text h2 {
+      font-weight: bolder;
+      font-size: xx-large;
+    }
+
+    .review-text p {
+      font-weight: 800;
+    }
+
+    .star-text {
+      font-weight: bold;
+      text-align: center;
+      font-size: x-large;
+    }
+
+    .art {
+      gap: 1rem;
+      margin: auto;
+    }
+
+    .art1,
+    .art2,
+    .art3,
+    .art4 {
+      border-radius: 30px;
+      gap: 1rem;
+      margin-left: 25px;
+      box-shadow: 0 4px 6px gray;
+      padding: 5px;
+      height: 44vh;
+      width: auto;
+    }
+
+    .art1:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    .art2:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    .art3:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+
+    .art4:hover {
+      transform: scale(1.01);
+      box-shadow: 0 6px 8px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- hompage link -->
+  <div class="container">
+    <div class="top-part">
+      <div class="topnav">
+        <div class="email">
+          <img src="../Assets/7.png" alt="" class="mail-icon">
+          <div class="gmail">prism@gmail.com</div>
+        </div>
+        <div class="links">
+          <a href="../Home_Page/index.html">Home</a>
+          <a href="../Pages/Blog_Page.html">Blog</a>
+          <a href="../Pages/Product_Page.html">Product</a>
+          <a href="../Pages/Research_Page.html">Research</a>
+          <a href="../Pages/About_us_Page.html">About us</a>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <section class="about-section">
+      <div class="about-grid">
+        <img alt="Our website" class="about-image" src="../Assets/WATCH1111111.png">
+        </img>
+        <div class="about-content">
+          <h1>ROLEX_WATCH </h1>
+          <h3>About This Item:</h3>
+          <p>
+            Luxury Submariner Date Steel Quartz Casual Design Stainless Steel Fashion Waterproof Watch For Men. Best
+            Watches collection of year 2025.User are Rated this Item In Below.
+          </p>
+          <img src="../Assets/1.png" alt="" width="200px" height="50px">
+          <h4>
+            <p>Old Price: <span> <del style="color: red;">Npr 34999</del></span></p>
+            <p>New Price: <span style="color: rgba(8, 207, 207, 0.882);">Npr 24999</span></p>
+            <p class="about-itemss">Color:<span>Black</span></p>
+            <p class="about-itemss">Available: <span>Stock</span></p>
+            <p class="about-itemss">Category: <span>Watch</span></p>
+            <p class="about-itemss">Shopping: <span>All over The World</span></p>
+            <p class="about-itemss">Water-Proof: <span>Yes</span></p>
+            <p class="about-itemss">Payment Option: <span>Yes</span></p>
+          </h4>
+          <div class="imagen">
+            <img class="nikh" src="../Assets/download.png" alt="esewa" width="50%">
+            <img class="nikh" src="../Assets/download (2).png" alt="visa" width="35%">
+            <img class="nikh" src="../Assets/download (3).png" alt="ime pay" width="40%">
+            <img class="nikh" src="../Assets/images.png" alt="ime pay" width="30%">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- footer link -->
+    <footer>
+      <div class="footer-bottom">
+        <div class="contact">
+          <h2>Contact Us</h2> <br>
+          <p>
+            Address : Kamalpokari,<br>
+            Kathmandu,Bagmati, Nepal <br>
+            Email No. : prism@gmail.com <br>
+            Phone No. : 01-45321002 <br>
+            Website : www.prism.watch.com <br>
+          </p>
+        </div>
+        <div class="pages">
+          <h2>Pages</h2><br>
+          <a href="../Home_Page/index.html">Home</a> <br>
+          <a href="../Pages/Blog_Page.html">Blog</a> <br>
+          <a href="../Pages/Product_Page.html">Product</a> <br>
+          <a href="../Pages/Research_Page.html">Research</a> <br>
+          <a href="../Pages/About_us_Page.html">About Us</a> <br>
+        </div>
+        <div class="services">
+          <h2>Our services</h2> <br>
+          <p>
+            Customer Service <br>
+            Returns & Exchanges <br>
+            Shipping & Delivery <br>
+            Privacy Policies <br>
+            Terms & Condtions <br>
+            F.A.Q
+          </p>
+        </div>
+        <div class="photos">
+          <h2>Follow us on</h2><br>
+          <div class="image-photos">
+            <img src="../Assets/facebook.png" alt="facebook">
+            <img src="../Assets/insta.png" alt="instagram">
+            <img src="../Assets/twitter.png" alt="twitter">
+            <img src="../Assets/yt.png" alt="youtube">
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        Prism Collection &copy; 2025, All Rights Reserved
+      </div>
+  </div>
+  </footer>
+  <script>
+    function addToCart() {
+      alert("Item has been added to the cart!");
+    }
+  </script>
+
+</body>
+
+</html>

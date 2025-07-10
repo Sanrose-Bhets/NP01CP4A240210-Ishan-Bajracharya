@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Blog Page</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* General Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      height: 100px;
+      max-width: 100%;
+    }
+
+    .topnav {
+      width: 100%;
+      background-color: rgb(62, 61, 61);
+      display: flex;
+    }
+
+    .email {
+      display: flex;
+      padding: 10px;
+      flex: 50%;
+      width: 50%;
+    }
+
+    .mail-icon {
+      height: 40px;
+      width: 40px;
+    }
+
+    .gmail {
+      color: white;
+      align-items: center;
+      padding: 5px;
+    }
+
+    .links {
+      display: flex;
+      gap: 30px;
+      padding: 10px;
+      margin-top: 5px;
+      font-size: larger;
+    }
+
+    .links:hover {
+      color: rgb(67, 112, 223);
+    }
+
+    .links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .bar {
+      height: 30px;
+      width: 30px;
+    }
+
+    nav {
+      background-color: black;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+      padding: 0 15px;
+      width: 100%;
+      display: flex;
+    }
+
+    .nav {
+      height: 800px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-image: url(walll.jpg);
+    }
+
+    .logo {
+      height: 70px;
+      width: fit-content;
+      align-items: center;
+      justify-content: space-around;
+      margin-left: auto;
+      margin-right: 33vh;
+    }
+
+    .logo1,
+    .logo2,
+    .logo3,
+    .logo4 {
+      height: 30px;
+      width: 30px;
+    }
+
+    .searchbar {
+      text-align: center;
+      background-color: rgb(37, 36, 36);
+      border-radius: 20px;
+      border: 1px solid rgb(97, 97, 97);
+      font-size: 17px;
+      padding: 10px 10px;
+      color: white;
+    }
+
+    ::placeholder {
+      color: white;
+    }
+
+    .icons {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+    }
+
+    /* Trends Section */
+    .trends {
+      margin: 2rem 0;
+    }
+
+    .trends h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .blog-post {
+      display: flex;
+      /* Makes image and text align side by side */
+      flex-direction: row;
+      /* Horizontal alignment */
+      align-items: center;
+      /* Vertically align items */
+      background: #fff;
+      margin-bottom: 1.5rem;
+      padding: 1.5rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      gap: 20px;
+      /* Space between image and text */
+    }
+
+    .post-image {
+      width: 20%;
+      /* Set the image width to a percentage for better responsiveness */
+      height: auto;
+      /* Maintain aspect ratio */
+      border-radius: 5px;
+      object-fit: cover;
+      /* Ensures the image fills its container nicely */
+    }
+
+    .post-content {
+      width: 60%;
+      /* Allow text to occupy the remaining space */
+    }
+
+
+    .post-content h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .post-content p {
+      font-size: 1rem;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    /* Recent News Styles */
+    .recent-news {
+      margin: 2rem 0;
+    }
+
+    .recent-news h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .news-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .news-card {
+      background: #fff;
+      padding: 1rem;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      text-align: center;
+    }
+
+    .news-card img {
+      width: 100%;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+
+    /* Marketplace Section */
+    .marketplace h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .blog-post {
+      display: flex;
+      flex-direction: row;
+      /* Horizontal layout */
+      justify-content: center;
+      /* Center align images */
+      align-items: center;
+      /* Vertically align images */
+      gap: 110px;
+      /* Spacing between images */
+    }
+
+    .marketplace .blog-post img {
+      width: auto;
+      height: 150px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Impact of Technology Section */
+    .impact-tech {
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: #f5f5f5;
+      /* Light gray background for contrast */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .info {
+      margin: 2rem 0;
+      padding: 2rem;
+      background-color: #f5f5f5;
+      /* Light gray background for contrast */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1)
+    }
+
+    .impact-tech h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #333;
+    }
+
+    .impact-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+
+    .advantages,
+    .disadvantages {
+      flex: 1;
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .advantages h3,
+    .disadvantages h3 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #007BFF;
+      /* Blue for headings */
+    }
+
+    .advantages ul,
+    .disadvantages ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .advantages li,
+    .disadvantages li {
+      margin-bottom: 0.5rem;
+    }
+
+    .footer {
+      background-color: black;
+      color: white;
+      padding: 2rem;
+    }
+
+    .footer-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .footer-logo {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      text-align: left;
+      max-width: 100%;
+    }
+
+    .footer-logo-image {
+      width: 15%;
+      height: auto;
+    }
+
+    .footer-description {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .footer-sections {
+      display: flex;
+      justify-content: space-around;
+      width: 100%;
+      gap: 2rem;
+    }
+
+    .contact,
+    .pages,
+    .services,
+    .photos {
+      text-align: left;
+      flex: 1;
+    }
+
+    .contact h2,
+    .pages h2,
+    .services h2,
+    .photos h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      font-weight: bold;
+    }
+
+    .contact p,
+    .services p {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+
+    .pages a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+    }
+
+    .pages a:hover {
+      color: rgb(57, 98, 232);
+    }
+
+    .photos .image-photos {
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .photos img {
+      height: 50px;
+      width: 50px;
+      object-fit: cover;
+    }
+
+    .copy-right {
+      text-align: center;
+      background-color: rgb(68, 65, 65);
+      padding: 1rem;
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+
+
+
+
+
+
+
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .topnav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu {
+        margin-bottom: 1rem;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .menu a {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .nav-actions {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .blog-post {
+        flex-direction: column;
+      }
+
+      .post-image,
+      .post-content {
+        width: 100%;
+        /* Make them take full width */
+      }
+
+      .news-grid {
+        flex-direction: column;
+      }
+
+      .footer-container {
+        flex-direction: column;
+      }
+
+      .footer-column {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+      }
+
+      .impact-container {
+        flex-direction: column;
+        /* Stack the two sections vertically on smaller screens */
+        gap: 1rem;
+      }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="container top-nav">
+      <div class="topnav">
+        <div class="email">
+          <img src="../Assets/7.png" alt="" class="mail-icon">
+          <div class="gmail">prism@gmail.com</div>
+        </div>
+        <div class="links">
+          <a href="../Home_Page/index.html">Home</a>
+          <a href="../Pages/Blog_Page.html">Blog</a>
+          <a href="../Pages/Product_Page.html">Product</a>
+          <a href="../Pages/Research_Page.html">Research</a>
+          <a href="../Pages/About_us_Page.html">About us</a>
+        </div>
+      </div>
+      <div class="nav">
+        <nav>
+          <div class="menu">
+            <img src="../Assets/bar.png" alt="" class="bar">
+            <h3 style="color: white;">Menu</h3>
+          </div>
+          <img src="../Assets/1.jpg" alt="" class="logo">
+          <div class="icons">
+            <img src="../Assets/2.png" alt="" class="logo1">
+            <input type="text" placeholder="Search here" class="searchbar">
+            <img src="../Assets/3.png" alt="" class="logo2">
+            <img src="../Assets/4.png" alt="" class="logo3">
+            <a href="../Pages/Login_Page.html"><img src="../Assets/5.png" alt="" class="logo4"></a>
+
+          </div>
+        </nav>
+      </div>
+  </header>
+
+  <main>
+    <section class="impact-tech">
+      <h2>Impact of Technology</h2>
+      <div class="info">
+        Technology in eCommerce refers to the use of digital tools,platforms,and systems to facilitate online
+        transactions, sales, and marketing. It allows customers to browse products, make purchases, view order
+        status and access customer support. It has a significant impact on many different aspects of the e-commerce
+        value chain, imncluding operations, customer service, and advertising. Technology plays a role in the field of
+        e-commerce,
+        enabling businesses to operate efficiently, enhance customer experiences, and stay competitive.
+      </div>
+
+
+      <div class="impact-container">
+        <div class="advantages">
+          <h3>Advantages</h3>
+          <ul>
+            <li>Enhanced communication and connectivity globally.</li>
+            <li>Automation of repetitive tasks increases productivity.</li>
+            <li>Improved healthcare through advanced medical equipment.</li>
+            <li>Access to vast knowledge and resources online.</li>
+            <li>Innovation in industries leading to economic growth.</li>
+          </ul>
+        </div>
+        <div class="disadvantages">
+          <h3>Disadvantages</h3>
+          <ul>
+            <li>Over-dependence on technology can reduce critical thinking.</li>
+            <li>Privacy concerns with data breaches and surveillance.</li>
+            <li>Increase in unemployment due to automation.</li>
+            <li>Digital addiction and negative mental health impacts.</li>
+            <li>Environmental impact due to e-waste and energy consumption.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="trends">
+      <h2>Trends in Market</h2>
+      <div class="blog-post">
+        <img src="../Assets/rolex.png" alt="Why Choose Rolex" class="post-image">
+        <div class="post-content">
+          <h2>Why Choose Rolex?</h2>
+          <p> Rolex watches are much more than luxurious accessories. Owning a rolex is more than just
+            purchasing a timepiece. Rolex has incorporated eco-friendly practices into its manufacturing
+            process. Owning a Rolex is about acquiring a piece of histry. Rolex watch speaks volume about
+            your taste while you're attending an event or closing a business deal.
+          </p>
+        </div>
+      </div>
+      <div class="blog-post">
+        <img src="../Assets/tiittaann.webp" alt="Titan - Affordable Luxury" class="post-image">
+        <div class="post-content">
+          <h2>Titan - Affordable Luxury</h2>
+          <p>Titan is one of the best example of "addordable luxury".Titan brings high-quatlity, Sophisticated
+            watches to consumers at a variety of price. This brand strikes a perfect balance between elegance
+            and affordability. Titan's global reach has expanded significantly over the years with its timeless
+            design, cutting-edge technology and impeccable craftmanship.
+          </p>
+        </div>
+      </div>
+      <div class="blog-post">
+        <img src="../Assets/caarrtiieer.jpeg" alt="Legacy of Cartier Watches" class="post-image">
+        <div class="post-content">
+          <h2>Legacy of Cartier Watches</h2>
+          <p>Cartier watches are more than timepieces-they are symbols of history, luxury and craftmanship. Cartier
+            watches remain a top choice for collector and watch enthusiast alike due to its timeless design, exceptional
+            craftmanship, luxury and innovative features. The brand has established a reputation for creating watches
+            that
+            are both beautiful and precise, with designs that stand the test of time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="recent-news">
+      <h2>Recent News & Events</h2>
+      <div class="news-grid">
+        <div class="news-card">
+          <h3>The DAKAR RALLY 2025 IS JOINED BY TUDOR OFFICIALLY AS TIMEKEPPER.</h3>
+          <img src="../Assets/tudor dakar.png" alt="News Image">
+          <p>TUDOR will serve as the official timekepper of the event.</p>
+        </div>
+        <div class="news-card">
+          <h3> CILLIAN MURPHY WEARING OMEGA AT THE OSCARS</h3>
+          <img src="../Assets/cillian.jpg" alt="News Image">
+          <p>Winner of Best Actor in leading role.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="marketplace">
+      <h2>The best Marketplace for best timepieces</h2>
+      <div class="blog-post">
+        <img src="../Assets/handshake.png" alt="News Image">
+
+        <img src="../Assets/sellers .jpg">
+
+        <img src="../Assets/stars.png">
+
+        <img src="../Assets/trusted by.png">
+
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="../Assets/1.jpg" alt="Prism Logo" class="footer-logo-image">
+          <p class="footer-description">
+            Prism is a leading, luxurious timepieces brand in Nepal, providing immense luxury, elegant designs, and
+            boundless precision. Starting from demure classics to durable sport models, Prism has the watch of your
+            choice for every occasion and journey. Let your journey begin and dive into the depths of an immense
+            collection of luxury.
+          </p>
+        </div>
+        <div class="footer-sections">
+          <div class="contact">
+            <h2>Contact Us</h2>
+            <p>
+              Address: Kamalpokari, Kathmandu, Bagmati, Nepal<br>
+              Email: prism@gmail.com<br>
+              Phone: 01-45321002<br>
+              Website: www.prism.watch.com
+            </p>
+          </div>
+          <div class="pages">
+            <h2>Pages</h2>
+            <a href="../Home_Page/index.html">Home</a><br>
+            <a href="../Pages/Blog_Page.html">Blog</a><br>
+            <a href="../Pages/Product_Page.html">Product</a><br>
+            <a href="../Pages/Research_Page.html">Research</a><br>
+            <a href="../Pages/About_us_Page.html">About Us</a>
+          </div>
+          <div class="services">
+            <h2>Our Services</h2>
+            <p>
+              Customer Service<br>
+              Returns & Exchanges<br>
+              Shipping & Delivery<br>
+              Privacy Policies<br>
+              Terms & Conditions<br>
+              F.A.Q
+            </p>
+          </div>
+          <div class="photos">
+            <h2>Follow Us On</h2>
+            <div class="image-photos">
+              <img src="../Assets/facebook.png" alt="Facebook">
+              <img src="../Assets/insta.png" alt="Instagram">
+              <img src="../Assets/twitter.png" alt="Twitter">
+              <img src="../Assets/yt.png" alt="YouTube">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="copy-right">
+        Prism Collection &copy; 2025, All Rights Reserved
+      </div>
+    </footer>
+  </main>
+</body>
+
+</html>
